@@ -1,0 +1,16 @@
+header .logo h1{
+    color: rgb(222, 69, 14);
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+body.clair {
+    background-color:whitesmoke ;
+    color: black;
+}
+
+body.sombre {
+    background-color: black;
+    color: whitesmoke;
+}
