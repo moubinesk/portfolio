@@ -13,7 +13,7 @@
     --color4: #E19D3D;
     --bg:             #E4DAB6;
     --text-primary:   #1A0A00;
-    --text-secondary: #654B3F;
+    --text-secondary: #654b3fb6;
     --text-muted:     #8A7868;
     --name-orange:    #C13D1A;
     --name-dark:      #3D0C0C;
@@ -194,16 +194,25 @@ section {
     color: var(--name-dark);
 }
 
+/* Nouveau conteneur pour aligner MOUBINE et le texte sur la même ligne */
+.hero-top-line {
+    display: flex;
+    justify-content: flex-start; /* Aligne les éléments côte à côte à partir de la gauche */
+    align-items: center; 
+    width: 100%;
+    gap: 90px; /* C'est cette valeur qui définit l'écart exact. Vous pouvez l'augmenter ou la réduire légèrement (ex: 40px ou 60px) pour obtenir le rendu parfait */
+}
+
+/* Le sous-titre reprend sa place dans le flux normal */
 .hero-subtitle {
-    position: absolute;
-    right: 56px;
-    top: calc(var(--header-h) + 60px);
+    position: static;
+    margin-top: 10px; /* Ajustement léger pour parfaire l'alignement visuel */
 }
 
 .hero-subtitle p {
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: clamp(1rem, 1.8vw, 1.35rem);
+    font-weight: 500;
+    font-size: clamp(1rem, 2.1vw, 1.9rem);
     color: var(--text-secondary);
     line-height: 1.4;
 }
@@ -261,7 +270,7 @@ section {
     margin-bottom: 28px;
 }
 
-.apropos-title span { color: var(--color2); }
+.apropos-title span { color: var(--color3); }
 
 .apropos-text {
     font-size: 1.05rem;
