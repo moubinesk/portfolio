@@ -1,62 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Moubine</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<header>
-    <div class="logo">
-        <h1>moubine s</h1>
-    </div>
-</header>
-<body>
-    <H1 class="titre1"> à Propos de moi</H1>
+<body class="clair"> <header class="header-main">
+        
+        <div class="top-bar">
+            <div class="logo">
+                <h1>moubine s</h1>
+            </div>
+            
+            <div class="toggles">
+                <div class="toggle-group">
+                    <input type="checkbox" id="langue">
+                    <label for="langue">EN / FR</label> 
+                </div>
+                <div class="toggle-group">
+                    <input type="checkbox" id="mode-sombre">
+                    <label for="mode-sombre">Mode sombre</label> 
+                </div>
+            </div>
+        </div>
 
+        <nav class="nav-container">
+            <a href="index.html" class="nav-item color1">
+                <span class="nav-num">01</span>
+                <span class="nav-text">ACCUEIL</span>
+            </a>
+            <a href="apropos.html" class="nav-item color2">
+                <span class="nav-num">02</span>
+                <span class="nav-text">À PROPOS</span>
+            </a>
+            <a href="realisations.html" class="nav-item color3">
+                <span class="nav-num">03</span>
+                <span class="nav-text">PRODUCTIONS</span>
+            </a>
+            <a href="contact.html" class="nav-item color4">
+                <span class="nav-num">04</span>
+                <span class="nav-text">CONTACT</span>
+            </a>
+        </nav>
+    </header>
 
-    <h2></h2>
+    <main class="hero-section" style="padding-top: 180px;">
+        <div class="large-name-area">
+            <h1 class="big-name first-name">MOUBINE</h1>
+            <h1 class="big-name last-name">SEKALAOUDINE</h1>
+        </div>
 
-    
+        <div class="welcome-area">
+            <p class="titre1 welcome-text">Bienvenue sur mon nouveau portfolio.</p>
+            <p class="summary-text">Découvrez mon profil et mes réalisations.</p>
+        </div>
+
+    </main>
+
+    <script>
+// --- 1. Gestion du Mode Sombre (Dark Mode) ---
+        var checkboxSombre = document.getElementById('mode-sombre');
+
+        checkboxSombre.addEventListener('change', function() {
+            if (this.checked) {
+                // Si la case est cochée, on ajoute la classe 'sombre' au body
+                document.body.classList.add('sombre');
+                document.body.classList.remove('clair');
+            } else {
+                // Sinon on repasse en 'clair'
+                document.body.classList.add('clair');
+                document.body.classList.remove('sombre');
+            }
+        });
+
+// 2. Gestion de la Langue
+        var francais = { "titre1": "Bienvenue sur mon nouveau portfolio." };
+        var anglais = { "titre1": "Welcome to my new portfolio." };
+        var checkboxLangue = document.getElementById('langue');
+        
+        checkboxLangue.addEventListener('change', function() {
+            if (this.checked) {
+                // Si coché, on passe en anglais
+                document.querySelector('.titre1').innerHTML = anglais.titre1;
+            } else {
+                // Sinon on repasse en français
+                document.querySelector('.titre1').innerHTML = francais.titre1;
+            }
+        });
+    </script>
 
 </body>
-
-<input type="checkbox" id="mode-sombre">
-<label for="mode-sombre">Mode sombre</label> 
-<input type="checkbox" id="langue">
-<label for="langue">langue</label> 
-
-<script>
-    //var checkbox = document.getElementById('mode-sombre');
-    //checkbox.addEventListener('change', function() {
-    //    document.body.classList.toggle('sombre', this.checked);
-    //    document.body.classList.toggle('clair', !this.checked);
-    //});
-    //var boutonTheme = document.getElementById('mode-sombre');
-    //boutonTheme.addEventListener('change', function() {
-    
-    //if (boutonTheme.checked === true) {
-    //    console.log("mode sombre activé");
-    //} else {
-    //    console.log("mode sombre désactivé");
-    //}
-
-
-var francais = {"titre1": "à Propos de moi"};
-var anglais = {"titre1": "About me"};
-
-document.querySelector('.titre1').innerHTML = anglais.titre1;
-
-var checkbox = document.getElementById('mode-sombre');
-checkbox.addEventListener('change', function() {
-    if (this.checked) {
-        document.body.classList.add('sombre');
-        document.body.classList.remove('clair');
-    } else {
-        document.body.classList.add('clair');
-        document.body.classList.remove('sombre');
-    }
-});
-</script>
 </html>
-
