@@ -316,31 +316,50 @@ section {
 
 .section-title span { color: var(--color3); }
 
-.productions-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+/* ===== SECTION PRODUCTIONS (LANDING PAGE) ===== */
+.productions-summary {
+    max-width: 750px;
+    margin-top: 10px;
 }
 
-.project-card {
-    border-radius: 8px;
-    overflow: hidden;
-    background: var(--bg-alt);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.summary-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 45px;
 }
 
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.13);
-}
-
-.card-thumb {
-    height: 190px;
-    display: flex;
+.cta-button {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    font-size: 2.4rem;
+    gap: 15px;
+    padding: 18px 36px;
+    background-color: var(--color3);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px; /* Donne un effet de pilule moderne */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Changement de couleur au survol et léger soulèvement */
+.cta-button:hover {
+    background-color: var(--name-orange);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(219, 98, 58, 0.3);
+}
+
+.cta-arrow {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+/* La flèche se décale vers la droite au survol */
+.cta-button:hover .cta-arrow {
+    transform: translateX(6px);
 }
 
 .c1 { background: var(--color1); }
@@ -471,6 +490,87 @@ body.sombre #contact { background: #0D0808; }
 .last-name     { animation: slideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both; }
 .hero-subtitle { animation: fadeIn 1s ease 0.48s both; }
 .hero-welcome  { animation: slideUp 0.7s ease 0.65s both; }
+
+        .blog-article {
+            margin-bottom: 40px;
+        }
+        .article-header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+        .article-title {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        .article-intro {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .article-section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+        font-family: 'Inter Black', sans-serif;
+        font-size: clamp(2.5rem, 5vw, 5rem); /* Taille exacte calquée sur 'QUI SUIS-JE' */
+        text-transform: uppercase;
+        color: var(--text-primary);
+        line-height: 0.9;
+        margin-bottom: 28px; /* Marge réduite pour correspondre à 'QUI SUIS-JE' */
+        }
+        .section-title span { 
+        color: var(--color3); 
+        }
+    
+        .article-figure {
+            margin: 25px 0;
+            padding: 0;
+            text-align: center;
+        }
+        .image-placeholder {
+            background-color: #eee;
+            border: 2px dashed #ccc;
+            padding: 50px 20px;
+            font-style: italic;
+            color: #666;
+            display: block;
+        }
+        .article-list {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        .article-list li {
+            margin-bottom: 8px;
+        }
+        .article-footer {
+            margin-top: 40px;
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .cta-section {
+            margin-top: 20px;
+        }
+        .cta-links {
+            margin-top: 15px;
+        }
+        .cta-link {
+            display: inline-block;
+            margin-right: 15px;
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cta-link:hover {
+            text-decoration: underline;
+        }
+        .sources-metadata {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
 
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(55px); }
