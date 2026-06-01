@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productions | Portfolio de Moubine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet 2.css">
+</head>
+<body class="clair">
+
+    <!-- ===== HEADER FIXE ===== -->
+    <header class="header-main">
+        <div class="top-bar">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">moubine s</a></h1>
+            </div>
+            <div class="toggles">
+                <label class="toggle-lang">
+                    <input type="checkbox" id="langue">
+                    <span class="lang-label">EN</span>
+                </label>
+                <label class="toggle-dark">
+                    <input type="checkbox" id="mode-sombre">
+                    <span class="dark-label" data-fr="MODE SOMBRE" data-en="DARK MODE">MODE SOMBRE</span>
+                </label>
+            </div>
+        </div>
+
+        <nav class="nav-container">
+            <!-- Remarquez les liens qui pointent maintenant vers index.html -->
+            <a href="index.html#accueil" class="nav-item color1">
+                <span class="nav-num">01</span>
+                <span class="nav-text" data-fr="ACCUEIL" data-en="HOME">ACCUEIL</span>
+            </a>
+            <a href="index.html#apropos" class="nav-item color2">
+                <span class="nav-num">02</span>
+                <span class="nav-text" data-fr="À PROPOS" data-en="ABOUT">À PROPOS</span>
+            </a>
+            <a href="#toutes-productions" class="nav-item color3">
+                <span class="nav-num">03</span>
+                <span class="nav-text" data-fr="PRODUCTIONS" data-en="WORK">PRODUCTIONS</span>
+            </a>
+            <a href="index.html#contact" class="nav-item color4">
+                <span class="nav-num">04</span>
+                <span class="nav-text" data-fr="CONTACT" data-en="CONTACT">CONTACT</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- ===== TOUTES LES PRODUCTIONS ===== -->
+    <section id="toutes-productions" style="padding-top: calc(var(--header-h) + 80px);">
+        <h2 class="section-title reveal d1" style="margin-bottom: 60px;">MES <span>PRODUCTIONS</span></h2>
+
+        <!-- CATEGORIE 1 : AUDIOVISUEL -->
+        <div class="category-block reveal d2">
+            <h3 class="category-title">01 / Audiovisuel & Documentaire</h3>
+            <div class="productions-grid">
+                
+                <div class="project-card">
+                    <div class="card-thumb c1">🎬</div>
+                    <div class="card-body">
+                        <p class="card-tag">Documentaire Interactif</p>
+                        <h3 class="card-title">Immersion à Busan</h3>
+                        <p class="card-desc">Exploration de l'histoire moderne sud-coréenne et de ses strates culinaires (Hansik). Travail narratif interactif.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-thumb c3">📱</div>
+                    <div class="card-body">
+                        <p class="card-tag">Captation Nomade</p>
+                        <h3 class="card-title">Rig iPhone Run & Gun</h3>
+                        <p class="card-desc">Conception d'un setup de tournage mobile professionnel avec système d'alimentation externe et SSD NVMe 2280.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-thumb c6">🎙️</div>
+                    <div class="card-body">
+                        <p class="card-tag">Sound Design</p>
+                        <h3 class="card-title">Tests Voix-off</h3>
+                        <p class="card-desc">Atelier d'enregistrement et de mixage vocal réalisé en collaboration avec Laurence et Laura pour un projet vidéo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CATEGORIE 2 : PHOTOGRAPHIE -->
+        <div class="category-block reveal d3">
+            <h3 class="category-title">02 / Photographie & Réseaux</h3>
+            <div class="productions-grid">
+                
+                <div class="project-card">
+                    <div class="card-thumb c2">📸</div>
+                    <div class="card-body">
+                        <p class="card-tag">Création de Contenu</p>
+                        <h3 class="card-title">What I see / What I take</h3>
+                        <p class="card-desc">Série de vidéos TikTok décryptant la photographie mobile. Expérimentation technique opposant les focales 24mm et 200mm.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-thumb c2">🎞️</div>
+                    <div class="card-body">
+                        <p class="card-tag">Reportage</p>
+                        <h3 class="card-title">Couverture Événementielle</h3>
+                        <p class="card-desc">Reportage photographique en binôme avec Carolina. Direction de la photographie et travail colorimétrique.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CATEGORIE 3 : CRÉATION NUMÉRIQUE -->
+        <div class="category-block reveal d4">
+            <h3 class="category-title">03 / Web & Création Numérique</h3>
+            <div class="productions-grid">
+                
+                <div class="project-card">
+                    <div class="card-thumb c4">💻</div>
+                    <div class="card-body">
+                        <p class="card-tag">Web Design (Master CMW)</p>
+                        <h3 class="card-title">Plateforme Web Doc</h3>
+                        <p class="card-desc">Développement front-end (HTML/CSS responsive, JS) et gestion de base de données (SQL, normes Dublin Core). UX via la méthode CPN.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-thumb c5">📝</div>
+                    <div class="card-body">
+                        <p class="card-tag">Étude de cas</p>
+                        <h3 class="card-title">Louis Vuitton - Horizon</h3>
+                        <p class="card-desc">Micro-enquête professionnelle et conception graphique d'un rapport axé sur le programme graduate du groupe LVMH.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== FOOTER SIMPLE ===== -->
+    <section id="contact" style="min-height: auto; padding-top: 60px; padding-bottom: 60px;">
+        <div class="contact-links" style="align-items: center; text-align: center;">
+            <a href="index.html#contact" class="cta-button" style="margin: 0 auto;">
+                <span class="cta-text">ME CONTACTER</span>
+                <span class="cta-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
