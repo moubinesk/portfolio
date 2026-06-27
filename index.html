@@ -1,152 +1,159 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="fr" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Moubine</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet 2.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Moubine Sekalaoudine — Productions Audiovisuelles & Créations Numériques</title>
+<meta name="description" content="Portfolio de Moubine Sekalaoudine — productions audiovisuelles, captation, montage et créations numériques." />
+<meta property="og:title" content="Moubine Sekalaoudine — Portfolio" />
+<meta property="og:description" content="Productions audiovisuelles & créations numériques." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 </head>
-<body class="clair">
+<body>
 
-    <!-- ===== HEADER FIXE ===== -->
-    <header class="header-main">
-        <div class="top-bar">
-            <div class="logo">
-                <h1>moubine s</h1>
-            </div>
-            <div class="toggles">
-                <label class="toggle-lang">
-                    <input type="checkbox" id="langue">
-                    <span class="lang-label">EN</span>
-                </label>
-                <label class="toggle-dark">
-                    <input type="checkbox" id="mode-sombre">
-                    <span class="dark-label" data-fr="MODE SOMBRE" data-en="DARK MODE">MODE SOMBRE</span>
-                </label>
-            </div>
+<nav class="nav">
+  <a href="#accueil" class="brand">Moubine S.</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#accueil" data-fr="Accueil" data-en="Home"><span class="num">01</span><span>Accueil</span></a>
+      <a href="#apropos" data-fr="À propos" data-en="About"><span class="num">02</span><span>À propos</span></a>
+      <a href="#productions" data-fr="Productions" data-en="Works"><span class="num">03</span><span>Productions</span></a>
+      <a href="#contact" data-fr="Contact" data-en="Contact"><span class="num">04</span><span>Contact</span></a>
+    </div>
+    <a href="productions.html" class="pill" data-fr="Tout voir" data-en="View all">Tout voir</a>
+    <div class="nav-divider">
+      <button class="pill" data-lang-toggle data-lang-label>EN</button>
+      <button class="pill" data-theme-toggle data-theme-icon>☀</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="accueil" class="hero grain">
+  <div class="hero-bg">
+    <img src="assets/hero-neon-street.jpg" alt="Néon brillant sur une rue mouillée la nuit" />
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow" data-fr="Productions Audiovisuelles & Créations Numériques" data-en="Audiovisual Productions & Digital Creations">Productions Audiovisuelles & Créations Numériques</span>
+    <h1 class="font-display">Moubine <br /><span class="action">Sekalaoudine</span></h1>
+    <p data-fr="Bienvenue dans mon portfolio. Raconter des histoires uniques à travers l'image, le son et le numérique." data-en="Welcome to my portfolio. Telling unique stories through image, sound and digital.">Bienvenue dans mon portfolio. Raconter des histoires uniques à travers l'image, le son et le numérique.</p>
+  </div>
+  <div class="scroll-cue">
+    <span data-fr="Défiler" data-en="Scroll">Défiler</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="apropos" class="about bg-noir">
+  <div class="container reveal">
+    <span class="section-tag" data-fr="02 — À Propos" data-en="02 — About">02 — À Propos</span>
+    <div class="about-grid">
+      <div>
+        <h2 class="font-display section-title">
+          <span data-fr="Qui " data-en="Who ">Qui </span><span class="action" data-fr="suis-" data-en="am ">suis-</span><span data-fr="je ?" data-en="I ?">je ?</span>
+        </h2>
+        <p style="margin-top:2rem" data-fr="Je m'appelle Moubine, j'ai 24 ans et je suis actuellement en master cultures et métiers du web." data-en="My name is Moubine, I'm 24 years old and currently in a master's degree in web cultures and professions.">Je m'appelle Moubine, j'ai 24 ans et je suis actuellement en master cultures et métiers du web.</p>
+      </div>
+      <div>
+        <span class="section-tag" data-fr="Compétences" data-en="Skills">Compétences</span>
+        <ul class="skills">
+          <li data-fr="Direction de la Photographie" data-en="Cinematography">Direction de la Photographie</li>
+          <li data-fr="Étalonnage" data-en="Color Grading">Étalonnage</li>
+          <li data-fr="Réalisation" data-en="Direction">Réalisation</li>
+          <li data-fr="Montage" data-en="Editing">Montage</li>
+          <li data-fr="Sound Design" data-en="Sound Design">Sound Design</li>
+          <li data-fr="Mise en Scène" data-en="Staging">Mise en Scène</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section id="productions" class="bg-bone">
+  <div class="container">
+    <div class="works-head reveal">
+      <span class="section-tag" data-fr="03 — Productions" data-en="03 — Works">03 — Productions</span>
+      <div class="works-head-flex">
+        <h2 class="font-display section-title">
+          <span data-fr="Mes " data-en="My ">Mes </span><span class="action" data-fr="Productions" data-en="Works">Productions</span>
+        </h2>
+        <p data-fr="Un panel varié de créations audiovisuelles et numériques — de la captation vidéo et photographique au documentaire interactif, en passant par le design web et graphique." data-en="A varied panel of audiovisual and digital creations — from video and photographic capture to interactive documentary, through web and graphic design.">Un panel varié de créations audiovisuelles et numériques — de la captation vidéo et photographique au documentaire interactif, en passant par le design web et graphique.</p>
+      </div>
+    </div>
+
+    <div class="works-grid">
+      <div class="work-card reveal">
+        <div class="img-wrap"><img src="assets/work-quiet-hour.jpg" alt="Portrait noir et blanc d'une femme près d'une fenêtre" class="aspect-34" loading="lazy" /></div>
+        <div class="work-meta">
+          <div>
+            <h3 class="font-display" data-fr="Captation Documentaire" data-en="Documentary Capture">Captation Documentaire</h3>
+            <p data-fr="Direction Photo / Court Métrage" data-en="Cinematography / Short Film">Direction Photo / Court Métrage</p>
+          </div>
+          <div style="text-align:right"><span class="tag">01</span><div class="tag-year">2024</div></div>
         </div>
-
-        <nav class="nav-container">
-            <a href="#accueil" class="nav-item color1">
-                <span class="nav-num">01</span>
-                <span class="nav-text" data-fr="ACCUEIL" data-en="HOME">ACCUEIL</span>
-            </a>
-            <a href="#apropos" class="nav-item color2">
-                <span class="nav-num">02</span>
-                <span class="nav-text" data-fr="À PROPOS" data-en="ABOUT">À PROPOS</span>
-            </a>
-            <a href="productions.html" class="nav-item color3">
-                <span class="nav-num">03</span>
-                <span class="nav-text" data-fr="PRODUCTIONS" data-en="WORK">PRODUCTIONS</span>
-            </a>
-            <a href="#contact" class="nav-item color4">
-                <span class="nav-num">04</span>
-                <span class="nav-text" data-fr="CONTACT" data-en="CONTACT">CONTACT</span>
-            </a>
-        </nav>
-    </header>
-
-    <!-- ===== 01 ACCUEIL ===== -->
-<section id="accueil">
-        <div class="hero-names">
-            <div class="hero-top-line">
-                <span class="big-name first-name">MOUBINE</span>
-                
-                <div class="hero-subtitle">
-                    <p class="subtitle-text"
-                       data-fr="Productions Audiovisuels<br>et Créations Numériques"
-                       data-en="Audiovisual Productions<br>and Digital Creations">
-                        Productions Audiovisuels<br>et Créations Numériques
-                    </p>
-                </div>
-            </div>
-            
-            <span class="big-name last-name">SEKALAOUDINE</span>
+      </div>
+      <div class="work-card reveal offset-pt">
+        <div class="img-wrap"><img src="assets/work-monolith.jpg" alt="Tour brutaliste émergeant du brouillard à l'aube" class="aspect-video" loading="lazy" /></div>
+        <div class="work-meta">
+          <div>
+            <h3 class="font-display" data-fr="Création Numérique" data-en="Digital Creation">Création Numérique</h3>
+            <p data-fr="Documentaire Interactif" data-en="Interactive Documentary">Documentaire Interactif</p>
+          </div>
+          <div style="text-align:right"><span class="tag">02</span><div class="tag-year">2023</div></div>
         </div>
-
-        <div class="hero-welcome">
-            <p class="titre1"
-               data-fr="Bienvenue dans mon portfolio :)"
-               data-en="Welcome to my portfolio :)">
-                Bienvenue dans mon portfolio :)
-            </p>
+      </div>
+      <div class="work-card reveal">
+        <div class="img-wrap"><img src="assets/work-static.jpg" alt="Plan macro d'une bobine 35mm avec lumière chaude" class="aspect-square" loading="lazy" /></div>
+        <div class="work-meta">
+          <div>
+            <h3 class="font-display" data-fr="Captation Vidéo" data-en="Video Capture">Captation Vidéo</h3>
+            <p data-fr="Réalisation / Post-Production" data-en="Direction / Post-Production">Réalisation / Post-Production</p>
+          </div>
+          <div style="text-align:right"><span class="tag">03</span><div class="tag-year">2024</div></div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- ===== 02 À PROPOS ===== -->
-    <section id="apropos">
-        <div class="section-label reveal" data-fr="02 — À PROPOS" data-en="02 — ABOUT">02 — À PROPOS</div>
-        <div class="apropos-grid">
-            <div class="reveal-left">
-                <h2 class="apropos-title">QUI <span>SUIS-</span> JE ?</h2>
-                <p class="apropos-text"
-                   data-fr="Je m'appelle Moubine, j'ai 24 ans et je suis actuellement en master cultures et métiers du web."
-                   data-en="My name is Moubine, I am 24 years old and I am currently in a master's program in webculture and professions.">
-                    Je m'appelle Moubine, j'ai 24 ans et je suis actuellement en master cultures et métiers du web.
-                </p>
-            </div>
-            <div class="reveal-right">
-                <p class="section-label" style="margin-bottom: 20px;" data-fr="COMPÉTENCES" data-en="SKILLS">COMPÉTENCES</p>
-                <div class="skills-list">
-                    <div class="skill-tag reveal d1">Direction de la Photographie</div>
-                    <div class="skill-tag reveal d2">Etalonnage</div>
-                    <div class="skill-tag reveal d3">Réalisation</div>
-                    <div class="skill-tag reveal d4">Montage</div>
-                    <div class="skill-tag reveal d5">Sound design</div>
-                    <div class="skill-tag reveal d6">Mise en scène</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="see-more">
+      <a href="productions.html"><span data-fr="Voir plus" data-en="See more">Voir plus</span> <span>→</span></a>
+    </div>
+  </div>
+</section>
 
-    <!-- ===== 03 PRODUCTIONS ===== -->
-<!-- ===== 03 PRODUCTIONS ===== -->
-    <section id="productions">
-        <div class="section-label reveal" data-fr="03 — PRODUCTIONS" data-en="03 — WORK">03 — PRODUCTIONS</div>
-        <h2 class="section-title reveal d1">MES <span>PRODUCTIONS</span></h2>
-        
-        <div class="productions-summary reveal d2">
-            <p class="summary-text"
-               data-fr="Découvrez un panel varié de créations audiovisuelles et numériques. De la captation vidéo et photographique à la réalisation de documentaires interactifs, en passant par le design web et graphique, chaque projet est pensé pour raconter une histoire unique."
-               data-en="Discover a diverse range of audiovisual and digital creations. From video capture and photography to interactive documentary filmmaking and web design, each project is crafted to tell a unique story.">
-                Découvrez un panel varié de créations audiovisuelles et numériques. De la captation vidéo et photographique à la réalisation de documentaires interactifs, en passant par le design web et graphique, chaque projet est pensé pour raconter une histoire unique.
-            </p>
-            
-            <a href="productions.html" class="cta-button reveal d3">
-                <span class="cta-text" data-fr="ACCÉDER AUX PRODUCTIONS" data-en="ACCESS PRODUCTIONS">ACCÉDER AUX PRODUCTIONS</span>
-                <span class="cta-arrow">→</span>
-            </a>
-        </div>
-    </section>
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Réalisation — Direction Photo — Montage — Étalonnage — Réalisation — Direction Photo — Montage — Étalonnage — Réalisation — Direction Photo — Montage — Étalonnage — Réalisation — Direction Photo — Montage — Étalonnage — </span>
+    <span>Réalisation — Direction Photo — Montage — Étalonnage — Réalisation — Direction Photo — Montage — Étalonnage — Réalisation — Direction Photo — Montage — Étalonnage — Réalisation — Direction Photo — Montage — Étalonnage — </span>
+  </div>
+</div>
 
-    <!-- ===== 04 CONTACT ===== -->
-    <section id="contact">
-        <div class="section-label reveal">04 — CONTACT</div>
-        <h2 class="contact-title reveal d1">TRAVAILLONS<br><span>ENSEMBLE</span></h2>
-        <div class="contact-links">
-            <a href="mailto:moubine@email.com" class="contact-link reveal d2">
-                <span class="arrow">→</span>
-                <span>moubine@email.com</span>
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="contact-link reveal d3">
-                <span class="arrow">→</span>
-                <span>LinkedIn</span>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="contact-link reveal d4">
-                <span class="arrow">→</span>
-                <span>Instagram</span>
-            </a>
-        </div>
-        <div class="footer-bar">
-            <span>MOUBINE SEKALAOUDINE</span>
-            <span id="year"></span>
-        </div>
-    </section>
+<!-- CONTACT -->
+<footer id="contact" class="contact bg-noir">
+  <div class="inner reveal">
+    <span class="section-tag" data-fr="04 — Contact" data-en="04 — Contact">04 — Contact</span>
+    <h2 class="font-display">
+      <span data-fr="Travaillons " data-en="Let's Work ">Travaillons </span><br />
+      <span class="underline-action" data-fr="Ensemble" data-en="Together">Ensemble</span>
+    </h2>
+    <p class="tagline" data-fr="Disponible pour vos projets de captation, réalisation et créations numériques." data-en="Available for your capture, production and digital creation projects.">Disponible pour vos projets de captation, réalisation et créations numériques.</p>
+    <a class="email" href="mailto:moubine@email.com">moubine@email.com</a>
+    <div class="socials">
+      <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+    </div>
+    <div class="foot-row">
+      <span>© <span id="year"></span> Moubine Sekalaoudine</span>
+      <span>Portfolio</span>
+    </div>
+  </div>
+</footer>
 
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>

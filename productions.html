@@ -1,158 +1,125 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="fr" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productions | Portfolio de Moubine</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet 2.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Productions — Moubine Sekalaoudine</title>
+<meta name="description" content="Toutes les productions de Moubine Sekalaoudine : projets vidéo, projets professionnels, projets scolaires et photographies personnelles." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 </head>
-<body class="clair">
+<body>
 
-    <!-- ===== HEADER FIXE ===== -->
-    <header class="header-main">
-        <div class="top-bar">
-            <div class="logo">
-                <h1><a href="index.html" style="text-decoration: none; color: inherit;">moubine s</a></h1>
-            </div>
-            <div class="toggles">
-                <label class="toggle-lang">
-                    <input type="checkbox" id="langue">
-                    <span class="lang-label">EN</span>
-                </label>
-                <label class="toggle-dark">
-                    <input type="checkbox" id="mode-sombre">
-                    <span class="dark-label" data-fr="MODE SOMBRE" data-en="DARK MODE">MODE SOMBRE</span>
-                </label>
-            </div>
-        </div>
+<nav class="nav">
+  <a href="index.html" class="brand">Moubine S.</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html" data-fr="Retour" data-en="Back">Retour</a>
+    </div>
+    <div class="nav-divider">
+      <button class="pill" data-lang-toggle data-lang-label>EN</button>
+      <button class="pill" data-theme-toggle data-theme-icon>☀</button>
+    </div>
+  </div>
+</nav>
 
-        <nav class="nav-container">
-            <!-- Remarquez les liens qui pointent maintenant vers index.html -->
-            <a href="index.html#accueil" class="nav-item color1">
-                <span class="nav-num">01</span>
-                <span class="nav-text" data-fr="ACCUEIL" data-en="HOME">ACCUEIL</span>
-            </a>
-            <a href="index.html#apropos" class="nav-item color2">
-                <span class="nav-num">02</span>
-                <span class="nav-text" data-fr="À PROPOS" data-en="ABOUT">À PROPOS</span>
-            </a>
-            <a href="#toutes-productions" class="nav-item color3">
-                <span class="nav-num">03</span>
-                <span class="nav-text" data-fr="PRODUCTIONS" data-en="WORK">PRODUCTIONS</span>
-            </a>
-            <a href="index.html#contact" class="nav-item color4">
-                <span class="nav-num">04</span>
-                <span class="nav-text" data-fr="CONTACT" data-en="CONTACT">CONTACT</span>
-            </a>
-        </nav>
-    </header>
+<section class="page-header bg-noir">
+  <div class="container reveal">
+    <span class="section-tag" data-fr="Index — Productions" data-en="Index — Works">Index — Productions</span>
+    <h1 class="font-display">
+      <span data-fr="Toutes mes " data-en="All my ">Toutes mes </span>
+      <span class="action" data-fr="Productions" data-en="Works">Productions</span>
+    </h1>
+    <p data-fr="Un panorama complet de mon travail : vidéo, projets professionnels, projets scolaires et photographies personnelles." data-en="A complete overview of my work: video, professional projects, school projects and personal photography.">Un panorama complet de mon travail : vidéo, projets professionnels, projets scolaires et photographies personnelles.</p>
+  </div>
+</section>
 
-    <!-- ===== TOUTES LES PRODUCTIONS ===== -->
-    <section id="toutes-productions" style="padding-top: calc(var(--header-h) + 80px);">
-        <h2 class="section-title reveal d1" style="margin-bottom: 60px;">MES <span>PRODUCTIONS</span></h2>
+<!-- VIDEO -->
+<section id="video" class="bg-noir">
+  <div class="container">
+    <div class="cat-head reveal">
+      <div>
+        <span class="section-tag">01 — <span data-fr="Projets Vidéo" data-en="Video Projects">Projets Vidéo</span></span>
+        <h2 class="font-display section-title" data-fr="Projets Vidéo" data-en="Video Projects">Projets Vidéo</h2>
+      </div>
+      <span class="section-tag">3 <span data-fr="projets" data-en="projects">projets</span></span>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card reveal"><div class="img-wrap"><img src="assets/work-quiet-hour.jpg" alt="Portrait noir et blanc" loading="lazy" /></div><div class="meta"><div><h3 class="font-display" data-fr="Captation Documentaire" data-en="Documentary Capture">Captation Documentaire</h3><p data-fr="Court Métrage" data-en="Short Film">Court Métrage</p></div><span class="year">2024</span></div></div>
+      <div class="cat-card reveal"><div class="img-wrap"><img src="assets/work-static.jpg" alt="Plan macro 35mm" loading="lazy" /></div><div class="meta"><div><h3 class="font-display" data-fr="Clip Musical" data-en="Music Video">Clip Musical</h3><p data-fr="Réalisation / Montage" data-en="Direction / Editing">Réalisation / Montage</p></div><span class="year">2024</span></div></div>
+      <div class="cat-card reveal"><div class="img-wrap"><img src="assets/hero-neon-street.jpg" alt="Néon brillant" loading="lazy" /></div><div class="meta"><div><h3 class="font-display" data-fr="Teaser Événementiel" data-en="Event Teaser">Teaser Événementiel</h3><p data-fr="Direction Photo" data-en="Cinematography">Direction Photo</p></div><span class="year">2023</span></div></div>
+    </div>
+  </div>
+</section>
 
-        <!-- CATEGORIE 1 : AUDIOVISUEL -->
-        <div class="category-block reveal d2">
-            <h3 class="category-title">01 / Audiovisuel & Documentaire</h3>
-            <div class="productions-grid">
-                
-                <div class="project-card">
-                    <div class="card-thumb c1">🎬</div>
-                    <div class="card-body">
-                        <p class="card-tag">Documentaire Interactif</p>
-                        <h3 class="card-title">Immersion à Busan</h3>
-                        <p class="card-desc">Exploration de l'histoire moderne sud-coréenne et de ses strates culinaires (Hansik). Travail narratif interactif.</p>
-                    </div>
-                </div>
+<!-- PRO -->
+<section id="pro" class="bg-bone">
+  <div class="container">
+    <div class="cat-head reveal">
+      <div>
+        <span class="section-tag">02 — <span data-fr="Projets Professionnels" data-en="Work Projects">Projets Professionnels</span></span>
+        <h2 class="font-display section-title" data-fr="Projets Professionnels" data-en="Work Projects">Projets Professionnels</h2>
+      </div>
+      <span class="section-tag">2 <span data-fr="projets" data-en="projects">projets</span></span>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card reveal"><div class="img-wrap"><img src="assets/work-monolith.jpg" alt="Tour brutaliste" loading="lazy" /></div><div class="meta"><div><h3 class="font-display" data-fr="Identité Visuelle" data-en="Visual Identity">Identité Visuelle</h3><p data-fr="Direction Artistique" data-en="Art Direction">Direction Artistique</p></div><span class="year">2024</span></div></div>
+      <div class="cat-card reveal"><div class="img-wrap"><img src="assets/work-static.jpg" alt="Macro 35mm" loading="lazy" /></div><div class="meta"><div><h3 class="font-display" data-fr="Site Vitrine" data-en="Showcase Website">Site Vitrine</h3><p data-fr="Design & Développement" data-en="Design & Development">Design & Développement</p></div><span class="year">2024</span></div></div>
+    </div>
+  </div>
+</section>
 
-                <div class="project-card">
-                    <div class="card-thumb c3">📱</div>
-                    <div class="card-body">
-                        <p class="card-tag">Captation Nomade</p>
-                        <h3 class="card-title">Rig iPhone Run & Gun</h3>
-                        <p class="card-desc">Conception d'un setup de tournage mobile professionnel avec système d'alimentation externe et SSD NVMe 2280.</p>
-                    </div>
-                </div>
+<!-- SCHOOL -->
+<section id="school" class="bg-noir">
+  <div class="container">
+    <div class="cat-head reveal">
+      <div>
+        <span class="section-tag">03 — <span data-fr="Projets Scolaires" data-en="School Projects">Projets Scolaires</span></span>
+        <h2 class="font-display section-title" data-fr="Projets Scolaires" data-en="School Projects">Projets Scolaires</h2>
+      </div>
+      <span class="section-tag">2 <span data-fr="projets" data-en="projects">projets</span></span>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card reveal"><div class="img-wrap"><img src="assets/work-monolith.jpg" alt="Architecture brutaliste" loading="lazy" /></div><div class="meta"><div><h3 class="font-display" data-fr="Documentaire Interactif" data-en="Interactive Documentary">Documentaire Interactif</h3><p data-fr="Projet de Master" data-en="Master's Project">Projet de Master</p></div><span class="year">2023</span></div></div>
+      <div class="cat-card reveal"><div class="img-wrap"><img src="assets/work-quiet-hour.jpg" alt="Portrait fenêtre" loading="lazy" /></div><div class="meta"><div><h3 class="font-display" data-fr="Court Métrage Étudiant" data-en="Student Short Film">Court Métrage Étudiant</h3><p data-fr="Réalisation Collective" data-en="Collective Direction">Réalisation Collective</p></div><span class="year">2022</span></div></div>
+    </div>
+  </div>
+</section>
 
-                <div class="project-card">
-                    <div class="card-thumb c6">🎙️</div>
-                    <div class="card-body">
-                        <p class="card-tag">Sound Design</p>
-                        <h3 class="card-title">Tests Voix-off</h3>
-                        <p class="card-desc">Atelier d'enregistrement et de mixage vocal réalisé en collaboration avec Laurence et Laura pour un projet vidéo.</p>
-                    </div>
-                </div>
+<!-- PHOTOS -->
+<section id="photos" class="bg-bone">
+  <div class="container">
+    <div class="cat-head reveal">
+      <div>
+        <span class="section-tag">04 — <span data-fr="Photographies Personnelles" data-en="Personal Photos">Photographies Personnelles</span></span>
+        <h2 class="font-display section-title" data-fr="Photographies Personnelles" data-en="Personal Photos">Photographies Personnelles</h2>
+        <p style="margin-top:1.5rem;max-width:28rem;font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.6" data-fr="Une galerie en attente de ses images — fragments, instants, lumières." data-en="A gallery waiting for its images — fragments, moments, light.">Une galerie en attente de ses images — fragments, instants, lumières.</p>
+      </div>
+      <span class="section-tag">0/9 <span data-fr="photos" data-en="photos">photos</span></span>
+    </div>
+    <div class="photo-grid">
+      <figure class="photo-tile f-45"><span class="num">01</span><span class="soon" data-fr="À venir" data-en="Coming soon">À venir</span></figure>
+      <figure class="photo-tile f-sq"><span class="num">02</span><span class="soon" data-fr="À venir" data-en="Coming soon">À venir</span></figure>
+      <figure class="photo-tile f-34"><span class="num">03</span><span class="soon" data-fr="À venir" data-en="Coming soon">À venir</span></figure>
+      <figure class="photo-tile f-45"><span class="num">04</span><span class="soon" data-fr="À venir" data-en="Coming soon">À venir</span></figure>
+      <figure class="photo-tile f-34"><span class="num">05</span><span class="soon" data-fr="À venir" data-en="Coming soon">À venir</span></figure>
+      <figure class="photo-tile f-sq"><span class="num">06</span><span class="soon" data-fr="À venir" data-en="Coming soon">À venir</span></figure>
+      <figure class="photo-tile f-45"><span class="num">07</span><span class="soon" data-fr="À venir" data-en="Coming soon">À venir</span></figure>
+      <figure class="photo-tile f-34"><span class="num">08</span><span class="soon" data-fr="À venir" data-en="Coming soon">À venir</span></figure>
+      <figure class="photo-tile f-sq"><span class="num">09</span><span class="soon" data-fr="À venir" data-en="Coming soon">À venir</span></figure>
+    </div>
+  </div>
+</section>
 
-            </div>
-        </div>
+<div class="back-home">
+  <div class="inner">
+    <a href="index.html"><span data-fr="← Retour à l'accueil" data-en="← Back to home">← Retour à l'accueil</span></a>
+    <span>© <span id="year"></span> Moubine Sekalaoudine</span>
+  </div>
+</div>
 
-        <!-- CATEGORIE 2 : PHOTOGRAPHIE -->
-        <div class="category-block reveal d3">
-            <h3 class="category-title">02 / Photographie & Réseaux</h3>
-            <div class="productions-grid">
-                
-                <div class="project-card">
-                    <div class="card-thumb c2">📸</div>
-                    <div class="card-body">
-                        <p class="card-tag">Création de Contenu</p>
-                        <h3 class="card-title">What I see / What I take</h3>
-                        <p class="card-desc">Série de vidéos TikTok décryptant la photographie mobile. Expérimentation technique opposant les focales 24mm et 200mm.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-thumb c2">🎞️</div>
-                    <div class="card-body">
-                        <p class="card-tag">Reportage</p>
-                        <h3 class="card-title">Couverture Événementielle</h3>
-                        <p class="card-desc">Reportage photographique en binôme avec Carolina. Direction de la photographie et travail colorimétrique.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- CATEGORIE 3 : CRÉATION NUMÉRIQUE -->
-        <div class="category-block reveal d4">
-            <h3 class="category-title">03 / Web & Création Numérique</h3>
-            <div class="productions-grid">
-                
-                <div class="project-card">
-                    <div class="card-thumb c4">💻</div>
-                    <div class="card-body">
-                        <p class="card-tag">Web Design (Master CMW)</p>
-                        <h3 class="card-title">Plateforme Web Doc</h3>
-                        <p class="card-desc">Développement front-end (HTML/CSS responsive, JS) et gestion de base de données (SQL, normes Dublin Core). UX via la méthode CPN.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-thumb c5">📝</div>
-                    <div class="card-body">
-                        <p class="card-tag">Étude de cas</p>
-                        <h3 class="card-title">Louis Vuitton - Horizon</h3>
-                        <p class="card-desc">Micro-enquête professionnelle et conception graphique d'un rapport axé sur le programme graduate du groupe LVMH.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-    <!-- ===== FOOTER SIMPLE ===== -->
-    <section id="contact" style="min-height: auto; padding-top: 60px; padding-bottom: 60px;">
-        <div class="contact-links" style="align-items: center; text-align: center;">
-            <a href="index.html#contact" class="cta-button" style="margin: 0 auto;">
-                <span class="cta-text">ME CONTACTER</span>
-                <span class="cta-arrow">→</span>
-            </a>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
