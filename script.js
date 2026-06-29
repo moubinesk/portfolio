@@ -1,6 +1,4 @@
-// Moubine Sekalaoudine — Portfolio (static export)
-
-// ---------- Theme (dark / light) ----------
+//  Theme
 const root = document.documentElement;
 let isDark = true;
 root.classList.add("dark");
@@ -13,7 +11,7 @@ function applyTheme() {
   });
 }
 
-// ---------- Language (FR / EN) ----------
+// Language 
 let lang = "fr";
 function applyLang() {
   const attr = lang === "en" ? "data-en" : "data-fr";
@@ -29,7 +27,7 @@ function applyLang() {
   document.documentElement.setAttribute("lang", lang);
 }
 
-// ---------- Wire toggles ----------
+
 document.addEventListener("click", (e) => {
   const t = e.target;
   if (!(t instanceof Element)) return;
@@ -38,14 +36,14 @@ document.addEventListener("click", (e) => {
 });
 
 // ---------- Smooth scroll for hash links ----------
-document.addEventListener("click", (e) => {
-  const a = e.target.closest && e.target.closest('a[href^="#"]');
-  if (!a) return;
-  const id = a.getAttribute("href");
-  if (id.length <= 1) return;
-  const el = document.querySelector(id);
-  if (el) { e.preventDefault(); el.scrollIntoView({ behavior: "smooth" }); }
-});
+// document.addEventListener("click", (e) => {
+//   const a = e.target.closest && e.target.closest('a[href^="#"]');
+//   if (!a) return;
+//   const id = a.getAttribute("href");
+//   if (id.length <= 1) return;
+//   const el = document.querySelector(id);
+//   if (el) { e.preventDefault(); el.scrollIntoView({ behavior: "smooth" }); }
+// });
 
 // ---------- Scroll reveal ----------
 const io = new IntersectionObserver((entries) => {
@@ -74,25 +72,7 @@ if (sections.length) {
   sections.forEach((s) => navIO.observe(s));
 }
 
-// ---------- Hero parallax ----------
-const heroBg = document.querySelector(".hero-bg");
-if (heroBg) {
-  let raf = 0;
-  const onScroll = () => {
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => {
-      const rect = heroBg.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const progress = (rect.top + rect.height / 2 - vh / 2) / vh;
-      const y = -progress * 0.25 * 100;
-      heroBg.style.transform = `translate3d(0, ${y}px, 0) scale(1.08)`;
-    });
-  };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-}
-
-// ---------- Year ----------
+// ---------- Année ----------
 const y = document.getElementById("year");
 if (y) y.textContent = new Date().getFullYear();
 
