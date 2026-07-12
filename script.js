@@ -77,3 +77,58 @@ const y = document.getElementById("year");
 if (y) y.textContent = new Date().getFullYear();
 
 applyTheme();
+
+// ---------- Project Lightbox ----------
+const lightbox = document.getElementById("lightbox");
+if (lightbox) {
+  const lbMedia = document.getElementById("lightboxMedia");
+  const lbCat = document.getElementById("lightboxCat");
+  const lbTitle = document.getElementById("lightboxTitle");
+  const lbDesc = document.getElementById("lightboxDesc");
+  const lbYear = document.getElementById("lightboxYear");
+ 
+  function openLightbox(card) {
+    const d = card.dataset;
+    lbCat.setAttribute("data-fr", d.catFr || "");
+    lbCat.setAttribute("data-en", d.catEn || "");
+    lbTitle.setAttribute("data-fr", d.titleFr || "");
+    lbTitle.setAttribute("data-en", d.titleEn || "");
+    lbDesc.setAttribute("data-fr", d.descFr || "");
+    lbDesc.setAttribute("data-en", d.descEn || "");
+    lbYear.textContent = d.year || "";
+ 
+    if (d.type === "video") {
+      lbMedia.innerHTML = `<iframe src="${d.src}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+    } else {
+      lbMedia.innerHTML = `<img src="${d.src}" alt="" />`;
+    }
+    lbMedia.classList.toggle("is-portrait", d.aspect === "portrait");
+ 
+    applyLang();
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+  }
+ 
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("lightbox-open");
+    setTimeout(() => { lbMedia.innerHTML = ""; }, 350);
+  }
+ 
+  document.querySelectorAll(".js-project").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      e.preventDefault();
+      openLightbox(card);
+    });
+  });
+ 
+  document.querySelectorAll("[data-lightbox-close]").forEach((el) => {
+    el.addEventListener("click", closeLightbox);
+  });
+ 
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
+  });
+}
