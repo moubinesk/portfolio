@@ -145,6 +145,9 @@ function openLightbox(card) {
       lbMedia.classList.toggle("is-portrait", d.aspect === "portrait");
     }
 
+    lbMedia.classList.toggle("is-contain", d.fit === "contain");
+    lbMedia.classList.toggle("is-light", d.bg === "light");
+
     applyLang();
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
