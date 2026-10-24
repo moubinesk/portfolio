@@ -108,27 +108,42 @@ if (lightbox) {
   const lbDesc = document.getElementById("lightboxDesc");
   const lbYear = document.getElementById("lightboxYear");
 
-  function openLightbox(card) {
+function openLightbox(card) {
     const d = card.dataset;
-    lbCat.setAttribute("data-fr", d.catFr || "");
-    lbCat.setAttribute("data-en", d.catEn || "");
-    lbTitle.setAttribute("data-fr", d.titleFr || "");
-    lbTitle.setAttribute("data-en", d.titleEn || "");
-    lbDesc.setAttribute("data-fr", d.descFr || "");
-    lbDesc.setAttribute("data-en", d.descEn || "");
-    lbYear.textContent = d.year || "";
+    const isPhoto = d.type === "photo";
+    
+    // Active le mode photo minimaliste si c'est une photo
+    lightbox.classList.toggle("is-photo", isPhoto);
 
-    if (d.type === "video") {
-      lbMedia.innerHTML = `<iframe src="${d.src}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
-      lbMedia.classList.remove("is-pending");
-    } else if (d.type === "pending") {
-      lbMedia.innerHTML = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg><span data-fr="Média à venir" data-en="Media coming soon">Média à venir</span>`;
-      lbMedia.classList.add("is-pending");
+    if (isPhoto) {
+      // Pour les photos : juste le titre et l'image
+      const title = d.title || d.titleFr || "";
+      lbTitle.setAttribute("data-fr", title);
+      lbTitle.setAttribute("data-en", d.titleEn || title);
+      lbMedia.innerHTML = `<img src="${d.src}" alt="${title}" />`;
+      lbMedia.classList.remove("is-pending", "is-portrait");
     } else {
-      lbMedia.innerHTML = `<img src="${d.src}" alt="${d.titleFr || ""}" />`;
-      lbMedia.classList.remove("is-pending");
+      // Pour les autres projets (vidéos, design, DA) : affichage complet
+      lbCat.setAttribute("data-fr", d.catFr || "");
+      lbCat.setAttribute("data-en", d.catEn || "");
+      lbTitle.setAttribute("data-fr", d.titleFr || "");
+      lbTitle.setAttribute("data-en", d.titleEn || "");
+      lbDesc.setAttribute("data-fr", d.descFr || "");
+      lbDesc.setAttribute("data-en", d.descEn || "");
+      lbYear.textContent = d.year || "";
+
+      if (d.type === "video") {
+        lbMedia.innerHTML = `<iframe src="${d.src}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+        lbMedia.classList.remove("is-pending");
+      } else if (d.type === "pending") {
+        lbMedia.innerHTML = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg><span data-fr="Média à venir" data-en="Media coming soon">Média à venir</span>`;
+        lbMedia.classList.add("is-pending");
+      } else {
+        lbMedia.innerHTML = `<img src="${d.src}" alt="${d.titleFr || ""}" />`;
+        lbMedia.classList.remove("is-pending");
+      }
+      lbMedia.classList.toggle("is-portrait", d.aspect === "portrait");
     }
-    lbMedia.classList.toggle("is-portrait", d.aspect === "portrait");
 
     applyLang();
     lightbox.classList.add("is-open");
@@ -160,4 +175,29 @@ if (lightbox) {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
   });
+}
+
+// ---------- Vision ScrollSpy (Highlight active section on scroll) ----------
+const visionSections = document.querySelectorAll(".vision-sections section");
+const visionLinks = document.querySelectorAll(".vision-link");
+
+if (visionSections.length > 0 && visionLinks.length > 0) {
+  const visionIO = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      
+      // Récupère l'ID de la section visible
+      const id = entry.target.getAttribute("id");
+      
+      // Met à jour la classe "active" sur tous les liens du menu vision
+      visionLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+      });
+    });
+  }, { 
+    threshold: 0.15, 
+    rootMargin: "-20% 0px -40% 0px" // Déclenche le changement un peu avant le milieu de l'écran
+  });
+
+  visionSections.forEach((section) => visionIO.observe(section));
 }

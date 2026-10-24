@@ -65,6 +65,15 @@ img { display: block; max-width: 100%; }
 .nav-links a:hover, .nav-links a.active { color: var(--action); opacity: 1; }
 .nav-links a span.num { color: rgba(249,115,22,.7); }
 
+/* ---------- VIDEO SECTION: FOOTER LINK (same style as nav "Retour") ---------- */
+.video-footer-link { margin-top: 2.5rem; display: flex; justify-content: flex-end; }
+.video-footer-link a {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.25em;
+  opacity: .6; color: inherit; transition: color .2s, opacity .2s;
+}
+.video-footer-link a:hover { color: var(--action); opacity: 1; }
+
 .nav-item-productions { position: relative; display: flex; align-items: center; }
 .nav-item-productions::after {
   content: "";
@@ -290,6 +299,28 @@ html.light .bg-bone .see-more a:hover { background: var(--bone); color: var(--no
 .cat-card .meta p { font-size: .85rem; color: var(--muted); }
 .cat-card .year { font-size: 10px; text-transform: uppercase; letter-spacing: .2em; color: var(--muted-40); border: 1px solid var(--border-15); border-radius: 9999px; padding: .25rem .75rem; }
 
+.pro-context { max-width: 42rem; margin: 2.5rem 0 3.5rem; font-size: 1rem; color: var(--muted); font-weight: 300; line-height: 1.7; }
+.pro-video-grid { margin-bottom: 4rem; }
+
+/* ---------- SCHOOL SECTION: WORK IN PROGRESS BLUR ---------- */
+.school-wip { position: relative; }
+.school-blur { filter: blur(10px); pointer-events: none; user-select: none; }
+.school-wip-overlay {
+  position: absolute; inset: 0; z-index: 5;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; gap: .85rem; padding: 2rem;
+  background: rgba(0,0,0,.45);
+}
+html.light .school-wip-overlay { background: rgba(255,255,255,.6); }
+.school-wip-title {
+  font-size: 11px;
+  text-transform: uppercase; letter-spacing: .3em;
+  color: inherit;
+}
+.school-wip-overlay p {
+  max-width: 26rem; font-size: .9rem; color: var(--muted); font-weight: 300; line-height: 1.6;
+}
+
 /* VIDEO GALLERY (asymmetric mosaic) */
 .video-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 @media (min-width: 768px) { .video-grid { grid-template-columns: repeat(6, 1fr); gap: 1.5rem; } }
@@ -455,3 +486,152 @@ body.lightbox-open { overflow: hidden; }
 }
 .lightbox-media.is-pending svg { width: 2.5rem; height: 2.5rem; fill: none; stroke: currentColor; stroke-width: 1.2; }
 .lightbox-media.is-pending span { font-size: 10px; text-transform: uppercase; letter-spacing: .3em; }
+
+/* ---------- PAGE VISION (MENU LATÉRAL & LAYOUT) ---------- */
+
+/* Ajustements pour le conteneur principal */
+.vision-sections {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  /* Réserve la place pour le menu latéral (à droite) sans rogner le fond des sections */
+  .vision-sections .container {
+    padding-right: 200px;
+  }
+}
+
+/* Intro GIF & Texte */
+.intro-vision {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .intro-vision {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+  }
+}
+.intro-vision-text p {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.intro-vision-media img {
+  width: 100%;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.02);
+}
+
+/* Sidebar Fixe (Desktop) */
+.vision-sidebar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .vision-sidebar {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 2.5rem;
+    transform: translateY(-50%);
+    z-index: 40;
+    background: transparent;
+    mix-blend-mode: difference; /* S'adapte aux fonds clairs et sombres */
+    color: #fff;
+  }
+}
+.vision-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+/* Liens du menu d'ancrage (Desktop & Mobile) */
+.vision-link {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  opacity: 0.4;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.vision-link::before {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.vision-link:hover, .vision-link.active {
+  opacity: 1;
+  color: var(--action);
+}
+@media (min-width: 1024px) {
+  .vision-link.active::before {
+    width: 1.5rem;
+    background: var(--action);
+  }
+}
+
+/* Menu horizontal (Mobile) */
+.vision-mobile-nav {
+  position: sticky;
+  top: 70px; /* Juste en dessous du header principal */
+  z-index: 45;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-15);
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  transition: background-color .4s ease;
+}
+.vision-mobile-nav::-webkit-scrollbar {
+  display: none; /* Cache la barre de scroll disgracieuse sur mobile */
+}
+@media (min-width: 1024px) {
+  .vision-mobile-nav {
+    display: none;
+  }
+}
+/* ---------- POP-UP PHOTO MINIMALISTE ---------- */
+.lightbox.is-photo .lightbox-panel {
+  grid-template-columns: 1fr; /* Supprime la colonne de texte */
+  max-width: 900px;
+  gap: 1.25rem;
+  text-align: center;
+  justify-items: center;
+  padding: 2rem;
+}
+.lightbox.is-photo .lightbox-media {
+  aspect-ratio: auto;
+  background: transparent;
+  max-height: 75vh;
+  display: flex;
+  justify-content: center;
+}
+.lightbox.is-photo .lightbox-media img {
+  position: static;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain; /* Empêche l'image d'être rognée */
+}
+/* Masque les catégories, descriptions et années */
+.lightbox.is-photo #lightboxCat,
+.lightbox.is-photo #lightboxDesc,
+.lightbox.is-photo #lightboxYear {
+  display: none;
+}
+.lightbox.is-photo .lightbox-info h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
