@@ -651,3 +651,17 @@ body.lightbox-open { overflow: hidden; }
   z-index: 1; transition: transform 1.2s cubic-bezier(.2,.8,.2,1);
 }
 .photo-tile.has-photo:hover img { transform: scale(1.05); }
+
+/* Aperçu vidéo dans la grille de l'accueil (format 16:9 au lieu de 4:5) */
+.work-card .img-wrap.is-video { aspect-ratio: 16 / 9; background: #000; }
+
+/* Accueil : le texte d'intro occupe l'espace au-dessus de la 2e tuile (remplace le décalage .offset-pt) */
+.works-col-right { display: contents; }
+.works-intro { order: -1; max-width: 28rem; font-size: .95rem; line-height: 1.6; color: var(--muted); }
+@media (min-width: 768px) {
+  .works-col-right { display: flex; flex-direction: column; }
+  .works-intro { order: 0; min-height: 12rem; display: flex; align-items: flex-start; padding-bottom: 2rem; }
+}
+
+/* Projets Pro : le lecteur Drive est mis en page plus grand puis réduit, pour ne pas être rogné dans les petites tuiles */
+.pro-video-grid .v-frame { width: 160%; height: 160%; transform: scale(.625); transform-origin: 0 0; }
